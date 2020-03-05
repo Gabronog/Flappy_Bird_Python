@@ -33,7 +33,7 @@ class Bird:
         displacement = self.velocity * self.tick_from_jump + 1.5 * self.tick_from_jump ** 2    # Hace un arco
         # -9,-6.5... hasta 0 (El pajaro sube) desde 0 hacia los positivos (El pajaro cae)
         if displacement >= 16:
-            displacement = 16
+            displacement = 16     # REDUCTOR VELOCIDAD HACIA ABAJO
         elif displacement < 0:
             displacement -= 2.2    # Si nos movemos hacia arriba desplacemonos mas
         self.y += displacement
